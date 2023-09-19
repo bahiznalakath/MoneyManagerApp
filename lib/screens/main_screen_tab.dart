@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moneymanagerapp/constants.dart';
+import 'package:moneymanagerapp/screens/home_profile_tab.dart';
 
 class MainscreenHost extends StatefulWidget {
   const MainscreenHost({Key? key}) : super(key: key);
@@ -9,6 +10,15 @@ class MainscreenHost extends StatefulWidget {
 }
 
 class _MainscreenHostState extends State<MainscreenHost> {
+  var currentIndex = 0;
+
+  Widget buildTabConent(int index) {
+    switch (index) {
+      case 0:
+        return const HomeProfileTab();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
