@@ -4,7 +4,6 @@ import 'package:moneymanagerapp/constants.dart';
 class MainscreenHost extends StatefulWidget {
   const MainscreenHost({Key? key}) : super(key: key);
 
-
   @override
   State<MainscreenHost> createState() => _MainscreenHostState();
 }
@@ -15,12 +14,20 @@ class _MainscreenHostState extends State<MainscreenHost> {
     return Scaffold(
       body: Container(),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex:0 ,
-        onTap: (index){},
+        currentIndex: 0,
+        onTap: (index) {},
         selectedItemColor: secondaryDark,
         unselectedItemColor: fontLight,
         items: [
-          BottomNavigationBarItem(icon: Image.asset("name"))
+          BottomNavigationBarItem(
+              icon: Image.asset("assets/icons/home-1.png"), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Image.asset("assets/icons/chart-vertical.png"),
+              label: "Stat"),
+          BottomNavigationBarItem(
+              icon: Image.asset("assets/icons/wallet.png"), label: "Wallet"),
+          BottomNavigationBarItem(
+              icon: Image.asset("assets/icons/user-1.png"), label: "Profile"),
         ],
       ),
     );
