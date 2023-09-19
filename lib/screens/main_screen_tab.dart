@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moneymanagerapp/constants.dart';
 
 class MainscreenHost extends StatefulWidget {
   const MainscreenHost({Key? key}) : super(key: key);
@@ -11,6 +12,17 @@ class MainscreenHost extends StatefulWidget {
 class _MainscreenHostState extends State<MainscreenHost> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Container(),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex:0 ,
+        onTap: (index){},
+        selectedItemColor: secondaryDark,
+        unselectedItemColor: fontLight,
+        items: [
+          BottomNavigationBarItem(icon: Image.asset("name"))
+        ],
+      ),
+    );
   }
 }
