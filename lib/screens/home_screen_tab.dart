@@ -19,8 +19,11 @@ class HomeScreenTab extends StatelessWidget {
             ),
             Row(
               children: [
-                Expanded(child: IncomeExpenseCard()), // Corrected widget name
-                Expanded(child: IncomeExpenseCard()), // Corrected widget name
+                Expanded(child: IncomeExpenseCard(expenseData: ExpenseData("Income","2000",Icons.arrow_upward_rounded),)),
+                SizedBox(
+                  width: defaultSpacing ,
+                ),// Corrected widget name
+                Expanded(child: IncomeExpenseCard(expenseData: ExpenseData("Expense","9900",Icons.arrow_downward_rounded),)), // Corrected widget name
               ],
             )
           ],
