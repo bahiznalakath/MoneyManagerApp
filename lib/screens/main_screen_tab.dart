@@ -36,7 +36,11 @@ class _MainscreenHostState extends State<MainscreenHost> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
         onTap: (index) {
-          setState(() {});
+          setState(() {
+            currentIndex =index ;
+          }
+          );
+          print(currentIndex);
         },
         selectedItemColor: secondaryDark,
         unselectedItemColor: fontLight,
