@@ -13,17 +13,28 @@ class HomeScreenTab extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(defaultSpacing),
         child: Column(
+          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
               height: defaultSpacing * 4,
             ),
+            ListTile(
+              leading: Image.asset("assets/images/avatar.jpeg",),
+              title: Text(" Hey ...name of user"),
+              trailing: Image.asset("assets/icons/bell."),),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(child: IncomeExpenseCard(expenseData: ExpenseData("Income","2000",Icons.arrow_upward_rounded),)),
+                Expanded(child: IncomeExpenseCard(expenseData: ExpenseData(
+                    "Income", "2000", Icons.arrow_upward_rounded),)),
                 SizedBox(
-                  width: defaultSpacing ,
-                ),// Corrected widget name
-                Expanded(child: IncomeExpenseCard(expenseData: ExpenseData("Expense","9900",Icons.arrow_downward_rounded),)), // Corrected widget name
+                  width: defaultSpacing,
+                ),
+                // Corrected widget name
+                Expanded(child: IncomeExpenseCard(expenseData: ExpenseData(
+                    "Expense", "9900", Icons.arrow_downward_rounded),)),
+                // Corrected widget name
               ],
             )
           ],
