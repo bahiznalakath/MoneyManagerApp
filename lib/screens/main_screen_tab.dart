@@ -16,7 +16,7 @@ class _MainscreenHostState extends State<MainscreenHost> {
   Widget buildTabContent(int index) {
     switch (index) {
       case 0:
-        return const HomeProfileTab();
+        return HomeScreenTab();
       case 1:
         return Container();
       case 2:
