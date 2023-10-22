@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moneymanagerapp/constants.dart';
+import 'package:moneymanagerapp/screens/transaction_item_list.dart';
 import '../widgets/income_expense_card.dart';
 
 class HomeScreenTab extends StatelessWidget {
@@ -11,7 +12,8 @@ class HomeScreenTab extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(defaultSpacing),
         child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
               height: defaultSpacing * 4,
@@ -72,7 +74,21 @@ class HomeScreenTab extends StatelessWidget {
                 )),
                 // Corrected widget name
               ],
-            )
+            ),
+            const SizedBox(
+              height: defaultSpacing * 2,
+            ),
+            Text("Recent Transactions",
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(fontWeight: FontWeight.w700)),
+            const SizedBox(
+              height: defaultSpacing * 2,
+            ),
+            const Text("Today"),
+            // Text("Today",style: TextStyle(color:fontSubHeading ),)
+            TransactionItemList(),
           ],
         ),
       ),
