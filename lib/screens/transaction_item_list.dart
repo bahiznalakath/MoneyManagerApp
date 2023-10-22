@@ -10,17 +10,40 @@ class TransactionItemList extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(defaultSpacing / 2),
       decoration: const BoxDecoration(
-        boxShadow: [BoxShadow(color: Colors.black12,offset: Offset.zero,blurRadius: 10,spreadRadius: 4)],
+        boxShadow: [
+          BoxShadow(
+              color: Colors.black12,
+              offset: Offset.zero,
+              blurRadius: 15,
+              spreadRadius: 6)
+        ],
         color: background,
         borderRadius: BorderRadius.all(Radius.circular(defaultRadius / 2)),
       ),
-      child: const ListTile(
-        leading: Icon(Icons.access_time_filled_sharp),
-        title: Text("Shoes"),
-        subtitle: Text("Snakes Nike"),
+      child: ListTile(
+        leading: const Icon(Icons.access_time_filled_sharp),
+        title: const Text("Shoes"),
+        subtitle: Text(
+          "Snakes Nike",
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                color: Colors.black,
+                fontSize: fontSizeTitle,
+              ),
+        ),
         trailing: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Text("140"), Text("aug 3")],
+          children: [
+            Text(
+              "140",
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+            color: Colors.black,
+            fontSize: fontSizeTitle,)
+          ),
+            Text(
+              "aug 3",
+              style: Theme.of(context).textTheme.bodyLarge,
+            )
+          ],
         ),
       ),
     );
