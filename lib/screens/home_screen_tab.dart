@@ -21,7 +21,11 @@ class HomeScreenTab extends StatelessWidget {
             ListTile(
               leading: ClipRRect(
                   borderRadius:
+<<<<<<< HEAD
                       const BorderRadius.all(Radius.circular(defaultRadius)),
+=======
+                      BorderRadius.all(Radius.circular(defaultRadius)),
+>>>>>>> 5e00f969e87fec15f4628701629f0497a4ab8631
                   child: Image.asset(
                     "assets/images/avatar.jpeg",
                   )),
