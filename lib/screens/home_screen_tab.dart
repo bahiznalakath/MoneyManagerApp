@@ -12,7 +12,6 @@ class HomeScreenTab extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(defaultSpacing),
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
@@ -20,16 +19,10 @@ class HomeScreenTab extends StatelessWidget {
             ),
             ListTile(
               leading: ClipRRect(
-                  borderRadius:
-<<<<<<< HEAD
-                      const BorderRadius.all(Radius.circular(defaultRadius)),
-=======
-                      BorderRadius.all(Radius.circular(defaultRadius)),
->>>>>>> 5e00f969e87fec15f4628701629f0497a4ab8631
-                  child: Image.asset(
-                    "assets/images/avatar.jpeg",
-                  )),
-              title: const Text(" Hey ...name of user"),
+                borderRadius: BorderRadius.circular(defaultRadius), // Remove extra borderRadius
+                child: Image.asset("assets/images/avatar.jpeg"),
+              ),
+              title: const Text("Hey ...name of user"),
               trailing: Image.asset("assets/icons/bell.png"),
             ),
             const SizedBox(
@@ -43,14 +36,14 @@ class HomeScreenTab extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .titleLarge
-                        ?.copyWith(fontSize: fontSizeHeading),
+                        ?.copyWith(fontSize: fontSizeHeading), // Change to headline6
                   ),
                   const SizedBox(
                     height: defaultSpacing,
                   ),
                   Text(
                     "Total balance",
-                    style: Theme.of(context).textTheme.bodyLarge,
+                    style: Theme.of(context).textTheme.bodyMedium, // Change to bodyText2
                   )
                 ],
               ),
@@ -60,39 +53,35 @@ class HomeScreenTab extends StatelessWidget {
             ),
             const Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              // mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(
-                    child: IncomeExpenseCard(
-                  expenseData:
-                      ExpenseData("Income", "2000", Icons.arrow_upward_rounded),
-                )),
+                  child: IncomeExpenseCard(
+                    expenseData: ExpenseData("Income", "2000", Icons.arrow_upward_rounded),
+                  ),
+                ),
                 SizedBox(
                   width: defaultSpacing,
                 ),
-                // Corrected widget name
                 Expanded(
-                    child: IncomeExpenseCard(
-                  expenseData: ExpenseData(
-                      "Expense", "9900", Icons.arrow_downward_rounded),
-                )),
-                // Corrected widget name
+                  child: IncomeExpenseCard(
+                    expenseData: ExpenseData("Expense", "9900", Icons.arrow_downward_rounded),
+                  ),
+                ),
               ],
             ),
             const SizedBox(
               height: defaultSpacing * 2,
             ),
-            Text("Recent Transactions",
-                style: Theme.of(context)
-                    .textTheme
-                    .titleLarge
-                    ?.copyWith(fontWeight: FontWeight.w700)),
+            Text(
+              "Recent Transactions",
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700), // Change to headline6
+            ),
             const SizedBox(
               height: defaultSpacing * 2,
             ),
             const Text("Today"),
-            // Text("Today",style: TextStyle(color:fontSubHeading ),)
-            TransactionItemList(),
+            // Text("Today", style: TextStyle(color: fontSubHeading),)
+            const TransactionItemList(),
           ],
         ),
       ),

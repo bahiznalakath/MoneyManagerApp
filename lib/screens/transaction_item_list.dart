@@ -10,7 +10,8 @@ class TransactionItemList extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(defaultSpacing / 2),
       decoration: const BoxDecoration(
-        color: Colors.red,
+        boxShadow: [BoxShadow(color: Colors.black12,offset: Offset.zero,blurRadius: 10,spreadRadius: 4)],
+        color: background,
         borderRadius: BorderRadius.all(Radius.circular(defaultRadius / 2)),
       ),
       child: const ListTile(
@@ -18,6 +19,7 @@ class TransactionItemList extends StatelessWidget {
         title: Text("Shoes"),
         subtitle: Text("Snakes Nike"),
         trailing: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [Text("140"), Text("aug 3")],
         ),
       ),
